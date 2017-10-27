@@ -1,10 +1,11 @@
 var planet = planetaryjs.planet();
-// You can remove this statement if `world-110m.json`
-// is in the same path as the HTML page:
+/* You can remove this statement if `world-110m.json`
+ is in the same path as the HTML page:
+*/
 planet.loadPlugin(planetaryjs.plugins.earth({
   topojson: { file: 'world-110m.json' }
 }));
-// Make the planet fit well in its canvas
+/* Make the planet fit well in its canvas */
 planet.projection.scale(250).translate([1000, 1000]);
 var canvas = document.getElementById('globe');
 planet.draw(canvas);
